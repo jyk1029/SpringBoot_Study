@@ -18,8 +18,4 @@ public class PostController {
     public void postEntity (@RequestBody @Valid PostRequest postRequest) throws Exception {
         postService.postEntity(postRequest);
     }
-    //@PostMapping("/login")
-    //public void Login(@Valid @RequestBody LogInDto logInDto){
-      //  postService.login(loginDto);
-    //}
 }
