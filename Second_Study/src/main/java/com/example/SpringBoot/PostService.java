@@ -26,4 +26,5 @@ public class PostService {
 
         postRepository.save(postEntity);
     }
+
 }

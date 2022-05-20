@@ -7,5 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface PostRepository extends CrudRepository<PostEntity, Long> {
-    Optional<PostEntity> findById(Long accountId);
+    Optional<PostEntity> findById(String  accountId);
 }

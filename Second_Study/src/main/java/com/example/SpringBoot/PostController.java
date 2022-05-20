@@ -1,5 +1,6 @@
 package com.example.SpringBoot;
 
+import Dto.LogInDto;
 import com.example.SpringBoot.domain.PostEntity;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -17,4 +18,8 @@ public class PostController {
     public void postEntity (@RequestBody @Valid PostRequest postRequest) throws Exception {
         postService.postEntity(postRequest);
     }
+    //@PostMapping("/login")
+    //public void Login(@Valid @RequestBody LogInDto logInDto){
+      //  postService.login(loginDto);
+    //}
 }

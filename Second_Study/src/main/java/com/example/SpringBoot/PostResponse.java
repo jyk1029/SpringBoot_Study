@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 @AllArgsConstructor
 public class PostResponse {
-   private final Long accountId;
+   private final String accountId;
    private final String name;
    private final String email;
    private final Long studentId;
