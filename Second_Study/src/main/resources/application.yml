@@ -4,11 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-<<<<<<< HEAD
     url: ${URL}
-=======
-    url: jdbc:mysql://${DB_URL}:3306/${DB_NAME}?serverTimezone=UTC&characterEncoding=UTF-8
->>>>>>> jyk1029/main
     username: ${username}
     password: ${password}
   jpa:
@@ -19,5 +15,3 @@ spring:
 
   jackson:
     property-naming-strategy: SNAKE_CASE
-
-
