@@ -1,0 +1,17 @@
+server:
+  port: 9088
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${URL}
+    username: ${username}
+    password: ${password}
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
