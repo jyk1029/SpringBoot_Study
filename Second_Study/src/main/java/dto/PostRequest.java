@@ -1,6 +1,6 @@
 package Dto;
 
-import com.example.SpringBoot.Sex;
+import com.example.global.type.Sex;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

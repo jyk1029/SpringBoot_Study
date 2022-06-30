@@ -4,10 +4,8 @@ package com.example.domain.service;
 import com.example.domain.domain.UserEntity;
 import com.example.domain.dto.*;
 import com.example.domain.domain.repository.UserRepository;
-import com.example.dto.*;
-import com.example.global.exception.AlreadyUserException;
-import com.example.global.exception.PasswordNotMatchException;
-import com.example.global.error.ErrorCode;
+import com.example.global.excepton.AlreadyUserException;
+import com.example.global.excepton.PasswordNotMatchException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -26,7 +24,7 @@ public class UserService {
     public void postEntity(UserRequest userRequest) {
 
         if (userRepository.findByAccountId(userRequest.getAccountId()).isPresent()) {
-            throw new AlreadyUserException(ErrorCode.ALREADY_USER);
+            throw AlreadyUserException.EXCEPTION;
         }
 
         UserEntity userEntity = UserEntity.builder()
@@ -47,7 +45,7 @@ public class UserService {
                 .orElseThrow(() -> new RuntimeException("Account Id Miss Match"));
 
         if (!passwordEncoder.matches(logInDto.getPassword(), loginUser.getPassword())) {
-            throw new PasswordNotMatchException(ErrorCode.PASSWORD_NOT_MATCHED);
+            throw PasswordNotMatchException.EXCEPTION;
         }
     }
 
