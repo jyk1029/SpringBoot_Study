@@ -1,6 +1,5 @@
 package com.example.domain.controller;
 
-import com.example.domain.dto.LogInDto;
 import com.example.domain.dto.UserEditDto;
 import com.example.domain.dto.UserListResponse;
 import com.example.domain.dto.UserRequest;
@@ -24,7 +23,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public void login(@Valid @RequestBody LogInDto logInDto) {
+    public void login(@Valid @RequestBody Dto.LogInDto logInDto) {
         userService.validationLogin(logInDto);
     }
 
