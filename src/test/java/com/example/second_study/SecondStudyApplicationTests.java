@@ -1,10 +1,10 @@
-package com.example.second_study;
+package com.example.springboot_log;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SecondStudyApplicationTests {
+class SpringBootSeApplicationTests {
 
     @Test
     void contextLoads() {

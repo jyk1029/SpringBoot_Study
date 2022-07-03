@@ -1,13 +1,11 @@
-package com.example.second_study;
+package com.example.SpringBoot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SecondStudyApplication {
-
+public class SpringBootSeApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SecondStudyApplication.class, args);
+        SpringApplication.run(SpringBootSeApplication.class, args);
     }
-
 }
