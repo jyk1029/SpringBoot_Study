@@ -21,7 +21,7 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
 
     @Transactional
-    public void postEntity(UserRequest userRequest) {
+    public void userEntity(UserRequest userRequest) {
 
         if (userRepository.findByAccountId(userRequest.getAccountId()).isPresent()) {
             throw AlreadyUserException.EXCEPTION;

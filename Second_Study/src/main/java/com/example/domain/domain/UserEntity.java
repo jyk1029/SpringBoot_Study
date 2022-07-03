@@ -1,6 +1,5 @@
 package com.example.domain.domain;
 
-
 import com.example.global.type.Sex;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,6 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 public class UserEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

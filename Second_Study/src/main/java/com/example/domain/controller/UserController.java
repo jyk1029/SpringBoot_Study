@@ -17,10 +17,9 @@ public class UserController {
 
     private final UserService userService;
 
-    @CrossOrigin("*")
     @PostMapping
-    public void postEntity(@Valid @RequestBody UserRequest postRequest) {
-        userService.postEntity(postRequest);
+    public void userEntity(@RequestBody @Valid UserRequest postRequest) {
+        userService.userEntity(postRequest);
     }
 
     @PostMapping("/login")

@@ -1,6 +1,5 @@
 package com.example.domain.domain.repository;
 
-
 import com.example.domain.domain.UserEntity;
 import org.springframework.data.repository.CrudRepository;
 
