@@ -18,8 +18,8 @@ public class UserController {
 
     @CrossOrigin("*")
     @PostMapping
-    public void postEntity(@Valid @RequestBody UserRequest postRequest) {
-        userService.postEntity(postRequest);
+    public void userEntity(@Valid @RequestBody UserRequest postRequest) {
+        userService.userEntity(postRequest);
     }
 
     @PostMapping("/login")
