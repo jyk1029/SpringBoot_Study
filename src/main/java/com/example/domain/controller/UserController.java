@@ -6,6 +6,7 @@ import com.example.domain.dto.UserRequest;
 import com.example.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import com.example.domain.dto.LogInDto;
 
 import javax.validation.Valid;
 
@@ -18,12 +19,12 @@ public class UserController {
 
     @CrossOrigin("*")
     @PostMapping
-    public void userEntity(@Valid @RequestBody UserRequest postRequest) {
-        userService.userEntity(postRequest);
+    public void userEntity(@Valid @RequestBody UserRequest userRequest) {
+        userService.userEntity(userRequest);
     }
 
     @PostMapping("/login")
-    public void login(@Valid @RequestBody Dto.LogInDto logInDto) {
+    public void login(@Valid @RequestBody LogInDto logInDto) {
         userService.validationLogin(logInDto);
     }
 
