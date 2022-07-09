@@ -13,7 +13,6 @@ public class UserRequest {
     private String accountId;
     @NotBlank(message = "password에는 Null이 들어가면 안됩니다.")
     private String password;
-
     private String name;
     private String email;
     private Long studentId;
