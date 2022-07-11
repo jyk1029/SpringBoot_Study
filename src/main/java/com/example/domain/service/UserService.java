@@ -3,10 +3,7 @@ package com.example.domain.service;
 import com.example.domain.domain.UserEntity;
 import com.example.domain.dto.*;
 import com.example.domain.domain.repository.UserRepository;
-import com.example.global.exception.AlreadyUserException;
-import com.example.global.exception.IdMissMatchException;
-import com.example.global.exception.PasswordNotMatchException;
-import com.example.global.exception.UserNotFoundException;
+import com.example.global.exception.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -62,7 +59,7 @@ public class UserService {
     @Transactional
     public void delete(String accountId) {
         UserEntity userEntity = userRepository.findByAccountId(accountId)
-                .orElseThrow(() -> new IllegalArgumentException("해당 계정이 없습니다. id=" + accountId));
+                .orElseThrow(() -> IdNotFoundException.EXCEPTION);
         userRepository.delete(userEntity);
     }
 
