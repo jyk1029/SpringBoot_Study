@@ -4,7 +4,9 @@ import com.example.domain.domain.UserEntity;
 import com.example.domain.dto.*;
 import com.example.domain.domain.repository.UserRepository;
 import com.example.global.exception.AlreadyUserException;
+import com.example.global.exception.IdMissMatchException;
 import com.example.global.exception.PasswordNotMatchException;
+import com.example.global.exception.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -41,7 +43,7 @@ public class UserService {
     @Transactional
     public void validationLogin(LogInDto logInDto) {
         UserEntity loginUser = userRepository.findByAccountId(logInDto.getAccountId())
-                .orElseThrow(() -> new RuntimeException("Account Id Miss Match"));
+                .orElseThrow(() -> IdMissMatchException.EXCEPTION);
 
         if (!passwordEncoder.matches(logInDto.getPassword(), loginUser.getPassword())) {
             throw PasswordNotMatchException.EXCEPTION;
@@ -67,7 +69,7 @@ public class UserService {
     @Transactional
     public void update(Long userId, UserEditDto userEditDto) {
         UserEntity userEntity = userRepository.findById(userId)
-                .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + userId));
+                .orElseThrow(() -> UserNotFoundException.EXCEPTION);
 
         userEntity.update(userEditDto.getAccountId(),
                 userEditDto.getEmail(),
