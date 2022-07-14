@@ -36,7 +36,17 @@ public class UserService {
 
         userRepository.save(userEntity);
     }
-
+//    @Transactional
+//    public TokenResponse login(UserRequest request) {
+//        UserEntity userEntity = userRepository.findByAccountId(request.getAccountId())
+//                .orElseThrow(() -> UserNotFoundException.EXCEPTION);
+//        if(!passwordEncoder.matches(request.getPassword(), userEntity.getPassword())) {
+//            throw PasswordNotMatchException.EXCEPTION;
+//        }
+//        return TokenResponse.builder()
+//                .accessToken(jwtTokenProvider.generateAccessToken(request.getAccountId()))
+//                .build();
+//    }
     @Transactional
     public void validationLogin(LogInDto logInDto) {
         UserEntity loginUser = userRepository.findByAccountId(logInDto.getAccountId())
