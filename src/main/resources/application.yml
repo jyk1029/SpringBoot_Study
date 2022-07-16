@@ -1,3 +1,8 @@
+jwt:
+  header: Authorization
+  secret: ${secret key}
+  access-token-validity-in-seconds: 1800 # 초 단위
+  refresh-token-validity-in-seconds: 604800
 spring:
   jpa:
     database: mysql
