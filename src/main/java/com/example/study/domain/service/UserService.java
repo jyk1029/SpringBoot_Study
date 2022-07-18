@@ -1,7 +1,6 @@
 package com.example.study.domain.service;
 
 import com.example.study.domain.domain.UserEntity;
-import com.example.domain.dto.*;
 import com.example.study.domain.domain.repository.UserRepository;
 import com.example.study.domain.dto.*;
 import com.example.study.global.exception.*;
@@ -37,17 +36,7 @@ public class UserService {
 
         userRepository.save(userEntity);
     }
-//    @Transactional
-//    public TokenResponse login(UserRequest request) {
-//        UserEntity userEntity = userRepository.findByAccountId(request.getAccountId())
-//                .orElseThrow(() -> UserNotFoundException.EXCEPTION);
-//        if(!passwordEncoder.matches(request.getPassword(), userEntity.getPassword())) {
-//            throw PasswordNotMatchException.EXCEPTION;
-//        }
-//        return TokenResponse.builder()
-//                .accessToken(jwtTokenProvider.generateAccessToken(request.getAccountId()))
-//                .build();
-//    }
+
     @Transactional
     public void validationLogin(LogInDto logInDto) {
         UserEntity loginUser = userRepository.findByAccountId(logInDto.getAccountId())
@@ -68,8 +57,8 @@ public class UserService {
     }
 
     @Transactional
-    public void delete(String accountId) {
-        UserEntity userEntity = userRepository.findByAccountId(accountId)
+    public void delete(Long userId) {
+        UserEntity userEntity = userRepository.findById(userId)
                 .orElseThrow(() -> IdNotFoundException.EXCEPTION);
         userRepository.delete(userEntity);
     }

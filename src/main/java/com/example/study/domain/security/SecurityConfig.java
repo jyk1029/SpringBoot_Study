@@ -1,6 +1,6 @@
 package com.example.study.domain.security;
 
-import com.example.study.global.error.UserControllerAdvice;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
