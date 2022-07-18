@@ -1,8 +1,8 @@
 package com.example.study.domain.service;
 
+import com.example.study.domain.controller.dto.*;
 import com.example.study.domain.domain.UserEntity;
 import com.example.study.domain.domain.repository.UserRepository;
-import com.example.study.domain.dto.*;
 import com.example.study.global.exception.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

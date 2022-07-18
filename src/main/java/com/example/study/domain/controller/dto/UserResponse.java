@@ -1,4 +1,4 @@
-package com.example.study.domain.dto;
+package com.example.study.domain.controller.dto;
 
 import com.example.study.global.type.Sex;
 import lombok.Builder;
