@@ -9,5 +9,5 @@ import java.util.Optional;
 
 public interface UserRepository extends CrudRepository<UserEntity, Long> {
     Optional<UserEntity> findByAccountId(String accountId);
-    List<UserEntity> findAllByOrderByIdDesc();
+    List<UserEntity> findAllByOrderByIdAsc();
 }

@@ -49,7 +49,7 @@ public class UserService {
 
     @Transactional(readOnly = true)
     public UserListResponse searchAllDesc() {
-        List<UserResponse> userList = userRepository.findAllByOrderByIdDesc()
+        List<UserResponse> userList = userRepository.findAllByOrderByIdAsc()
                 .stream()
                 .map(this::accountBuilder)
                 .collect(Collectors.toList());
