@@ -1,12 +1,12 @@
-package com.example.study.domain.controller;
+package com.example.study.domain.user.controller;
 
-import com.example.study.domain.controller.dto.UserEditDto;
-import com.example.study.domain.controller.dto.UserListResponse;
-import com.example.study.domain.controller.dto.UserRequest;
-import com.example.study.domain.service.UserService;
+import com.example.study.domain.user.controller.dto.UserEditDto;
+import com.example.study.domain.user.controller.dto.UserListResponse;
+import com.example.study.domain.user.controller.dto.UserRequest;
+import com.example.study.domain.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import com.example.study.domain.controller.dto.LogInDto;
+import com.example.study.domain.user.controller.dto.LogInDto;
 
 import javax.validation.Valid;
 

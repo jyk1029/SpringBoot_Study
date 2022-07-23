@@ -1,6 +1,7 @@
-package com.example.study.domain.domain;
+package com.example.study.domain.user.domain;
 
 import com.example.study.global.type.Sex;
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 public class UserEntity {
     @Id

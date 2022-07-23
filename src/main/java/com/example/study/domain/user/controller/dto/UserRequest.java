@@ -1,4 +1,4 @@
-package com.example.study.domain.controller.dto;
+package com.example.study.domain.user.controller.dto;
 
 import com.example.study.global.type.Sex;
 import lombok.Getter;

@@ -1,7 +1,7 @@
-package com.example.study.domain.domain.repository;
+package com.example.study.domain.user.domain.repository;
 
 
-import com.example.study.domain.domain.UserEntity;
+import com.example.study.domain.user.domain.UserEntity;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

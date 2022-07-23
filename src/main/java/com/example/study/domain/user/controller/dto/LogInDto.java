@@ -1,4 +1,4 @@
-package com.example.study.domain.controller.dto;
+package com.example.study.domain.user.controller.dto;
 
 import lombok.Builder;
 import lombok.Getter;
